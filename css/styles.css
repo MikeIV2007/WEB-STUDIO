@@ -123,6 +123,7 @@ header .container .top-line .svg-humburger {
   height: 22px;
 }
 header .container .top-line .main-nav {
+  z-index: 1;
   display: none;
   position: absolute;
   top: 100%;
