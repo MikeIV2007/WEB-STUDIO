@@ -97,6 +97,7 @@ header {
               .link {
                 @include font-style($header3);
                 @include apply-color($navy-blue);
+                transition: color $timing $cubic;
 
                 &:hover,
                 &:focus {
