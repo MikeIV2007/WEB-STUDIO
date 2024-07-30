@@ -79,6 +79,11 @@ $dairy: (
   border-color: map-get($color-map, value);
 }
 
+@mixin gradient-bg($start-color-map, $end-color-map) {
+  background: linear-gradient(to bottom right, map-get($start-color-map, value), map-get($end-color-map, value));
+}
+
+
 // Usage examples:
 
 // Text colors

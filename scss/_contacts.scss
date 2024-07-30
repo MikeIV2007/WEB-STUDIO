@@ -1,0 +1,109 @@
+@import 'colors';
+@import 'fonts';
+@import 'social-links';
+
+.section.contacts-page {
+  padding-top: 96px;
+  padding-bottom: 96px;
+  @include gradient-bg($iris, $cornflower);
+
+  .container {
+    .section-title {
+      margin-bottom: 96px;
+    }
+    .contacts.list {
+      margin-bottom: 72px;
+      .item {
+        .title {
+          @include font-style($header3);
+          @include apply-color($navy-blue);
+        }
+        .link {
+          @include apply-color($navy-blue);
+          transition: color $timing $cubic;
+          &:hover,
+          &:focus {
+            @include apply-color($iris);
+          }
+        }
+      }
+    }
+    .social-links {
+      flex-direction: column;
+      align-items: flex-start;
+      .media-icons {
+        display: flex;
+        min-width: 232px;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section.contacts-page {
+    .container {
+      padding-left: 156px;
+      padding-right: 156px;
+
+      .contacts.list {
+        margin-bottom: 72px;
+        .item {
+          .title {
+            @include font-style($header2);
+          }
+          .link {
+            //   @include apply-color($navy-blue);
+            //   &:hover,
+            //   &:focus {
+            //     @include apply-color($iris);
+            //   }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section.contacts-page {
+
+
+    .container {
+      width: 756px;
+      .section-title {
+        margin-bottom: 96px;
+      }
+
+      .section-title {
+        @include font-style($title-header1);
+      }
+      .contacts.list {
+        margin-bottom: 72px;
+        .item {
+          .title {
+              @include font-style($header2);
+            //   @include apply-color($navy-blue);
+          }
+          .link {
+            @include font-style($body);
+            //   @include apply-color($navy-blue);
+            //   &:hover,
+            //   &:focus {
+            //     @include apply-color($iris);
+            //   }
+          }
+        }
+      }
+      .social-links {
+        .media-title {
+        }
+        .media-icons {
+          // display: flex;
+          // min-width: 232px;
+          // justify-content: space-between;
+        }
+      }
+    }
+  }
+}

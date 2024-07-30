@@ -44,6 +44,7 @@ header {
       }
 
       .main-nav {
+        z-index: 1;
         display: none;
         position: absolute;
         top: 100%;
@@ -58,7 +59,8 @@ header {
         }
 
         .site-nav {
-          margin-bottom: 284px;
+          margin-bottom: 284px; 
+          
 
           .item {
             margin-bottom: 40px;
@@ -97,6 +99,7 @@ header {
               .link {
                 @include font-style($header3);
                 @include apply-color($navy-blue);
+                transition: color $timing $cubic;
 
                 &:hover,
                 &:focus {
