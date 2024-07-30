@@ -1,0 +1,21 @@
+/* Sections */
+.section {
+    max-width: 1440px;
+    padding-top: 0px;
+    // padding-bottom: 120px;
+    // padding-bottom: 96px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title {
+    @include apply-color($navy-blue);
+    @include font-style($header2);
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 0;
+    margin-bottom: 72px;
+}
+.section-title.hidden{
+    display: none;
+}

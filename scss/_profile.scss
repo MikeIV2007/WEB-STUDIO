@@ -1,0 +1,102 @@
+// @import 'colors';
+// @import 'fonts';
+// @import 'social-links';
+
+/* Profile 4 */
+.section.profile {
+  @include apply-background-color($cloud);
+  padding-top: 96px;
+  margin-bottom: 96px;
+  .container {
+    .profile-list.list {
+      display: block;
+      width: 246px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 96px;
+
+      .item {
+        @include apply-background-color($white);
+        margin-bottom: 72px;
+        text-align: center;
+        padding-bottom: 32px;
+        &:nth-last-child(1) {
+          margin-bottom: 0;
+        }
+
+        .profile-img {
+          width: 100%;
+          margin-bottom: 32px;
+        }
+        .content {
+          width: 100%;
+          padding-left: 16px;
+          padding-right: 16px;
+          .title {
+            @include apply-color($navy-blue);
+            @include font-style($header3);
+            margin-top: 0;
+            margin-bottom: 8px;
+            text-align: center;
+          }
+          .text {
+            @include apply-color($slate);
+            @include font-style($body);
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section.profile {
+    @include apply-background-color($cloud);
+    padding-top: 96px;
+    margin-bottom: 96px;
+    .container {
+      .profile-list.list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-left: -12px;
+        margin-right: -12px;
+
+        .item {
+          flex-basis: 40%;
+          margin-left: 12px;
+          margin-right: 12px;
+          max-width: 246px;
+          &:nth-last-child(1) {
+            margin-bottom: 72px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section.profile {
+    padding-top: 120px;
+    padding-bottom:120px;
+    .container {
+      .profile-list.list {
+        justify-content: space-between;
+        padding-left: 156px;
+        padding-right: 156px;
+        padding-bottom: 0px;
+        .item {
+          margin-bottom: 0;
+          padding-bottom: 0;
+          &:nth-last-child(1) {
+            margin-bottom: 0px;
+          }
+        }
+      }
+    }
+  }
+}

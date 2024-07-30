@@ -1,0 +1,99 @@
+@import 'buttons';
+@import 'colors';
+@import 'fonts';
+@import 'basic_styles';
+
+/* Portfolio */
+.portfolio-list.list {
+  display: inline-block;
+  .item {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 48px;
+
+    border: 1px solid #e7e9fc;
+    @include apply-color($cloud);
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    }
+    .prodact-thumb {
+      position: relative;
+      overflow: hidden;
+      .img {
+        width: 100%;
+        height: 280px;
+      }
+      .prodact-thumb-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: rgba(244, 244, 253, 1);
+        background-color: rgba(77, 90, 229, 1);
+
+        transform: translateY(100%);
+        opacity: 0;
+        transition: transform $timing $cubic, opacity $timing $cubic;
+        padding: 40px 32px;
+      }
+    }
+    .content {
+      padding-left: 16px;
+      margin-top: 32px;
+      margin-bottom: 32px;
+      .title {
+        margin-top: 0;
+        margin-bottom: 8px;
+        @include font-style($header3);
+        @include apply-color($navy-blue);
+      }
+      .text {
+        @include font-style($body);
+        @include apply-color($slate);
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
+
+.portfolio-list.list .item:hover .prodact-thumb-overlay {
+  transform: translateY(0);
+  opacity: 1;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-list.list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+    margin-bottom: 72px;
+    margin-top: -24px;
+    .item {
+      flex-basis: 46%;
+      margin-left: 12px;
+      margin-right: 12px;
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .portfolio-list.list {
+    justify-content: flex-start;
+    padding-left: 156px;
+    padding-right: 156px;
+    margin-bottom: 96px;
+    .item.link {
+      max-width: 360px;
+      flex-basis:31%;
+    }
+  }
+}

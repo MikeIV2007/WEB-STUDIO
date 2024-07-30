@@ -1,0 +1,31 @@
+@import 'basic_styles';
+@import 'colors';
+@import 'fonts';
+
+.social-links {
+  width: inherit;
+  max-width: 328px;
+  min-height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    @include apply-background-color($iris);
+    border-radius: 50%;
+    transition: background-color $timing $cubic;
+    &:hover,
+    &:focus{
+      @include apply-background-color($green);
+    }
+    .svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}

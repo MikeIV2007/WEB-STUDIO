@@ -1,0 +1,194 @@
+@import 'colors';
+@import 'fonts';
+
+.footer {
+  max-width: 1440px;
+  @include apply-background-color($navy-blue);
+  margin-left: auto;
+  margin-right: auto;
+  .container {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    .content {
+      width: 286px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 72px;
+
+      .logo {
+        display: inline-block;
+        margin-bottom: 16px;
+        @include apply-color($iris);
+        .logo-span {
+          @include apply-color($white);
+        }
+      }
+      .footer-text {
+        @include font-style($body);
+        @include apply-color($cloud);
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+    .social-links {
+      width: 208px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 112px;
+      flex-direction: column;
+      justify-content: left;
+      .media-title {
+        @include font-style($body-medium);
+        @include apply-color($white);
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      .media-icons {
+        width: inherit;
+        justify-content: space-between;
+        display: flex;
+        padding-top: 0;
+      }
+    }
+    .subscribe {
+      position: relative;
+      background-color: inherit;
+      @include font-style($body-medium);
+      @include apply-color($white);
+      .form-subscribe {
+        width: 100%;
+        .input {
+          width: 100%;
+          min-height: 40px;
+          background-color: inherit;
+          padding: 8px 16px;
+          border-radius: 4px;
+          border: 1px solid map-get($white, value);
+          @include apply-color($white);
+          margin-bottom: 16px;
+        }
+        .form-label {
+          position: absolute;
+          top: -40px;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          @include font-style($body-medium);
+          @include apply-color($white);
+        }
+      }
+      .button.primary {
+        position: relative;
+        width: 165px;
+        height: 40px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 24px;
+        text-align: left;
+        .svg {
+          position: absolute;
+          top: 50%;
+          right: 24px;
+          transform: translateY(-50%);
+          width: 24px;
+          height: 24px;
+          @include svg-fill($white);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    .container {
+      display: flex;
+      text-align: left;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding-left: 108px;
+      padding-right: 108px;
+
+      .content {
+        width: 264px;
+        margin-left: 0;
+        margin-right: 24px;
+        margin-bottom: 72px;
+      }
+
+      .social-links {
+        width: 208px;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      .subscribe {
+        display: flex;
+        justify-content: space-between;
+        .form-subscribe {
+          width: 264px;
+          margin-right: 24px;
+          margin-bottom: 0;
+          .form-label {
+            position: absolute;
+            left: 0;
+            transform: translateX(0);
+          }
+        }
+      }
+      .button.primary {
+        position: relative;
+        width: 165px;
+        height: 40px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 24px;
+        text-align: left;
+        .svg {
+          position: absolute;
+          top: 50%;
+          right: 24px;
+          transform: translateY(-50%);
+          width: 24px;
+          height: 24px;
+          @include svg-fill($white);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .footer {
+    .container {
+      padding-left: 156px;
+      padding-right: 156px;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+
+      .content {
+        margin-bottom: 0;
+      }
+
+      .social-links {
+        height: 80px;
+        margin-bottom: 0;
+      }
+
+      .subscribe {
+        position: static;
+        height: 80px;
+        align-items: flex-end;
+        .form-subscribe {
+          position: relative;
+          .input {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+

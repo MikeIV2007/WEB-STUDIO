@@ -1,0 +1,94 @@
+@import 'colors';
+@import 'fonts';
+
+/* Features 2 */
+.features-list.list {
+  .item {
+    width: 100%;
+    // width: calc((100% - 72px) / 4);
+    // margin-right: 24px;
+    // margin-bottom: 24px;
+
+    .title {
+      @include apply-color($navy-blue);
+      @include font-style($header2);
+      margin-top: 0;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .text {
+      @include apply-color($slate);
+      @include font-style($body-medium);
+      margin-bottom: 72px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .features-list.list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+    .item {
+      flex-basis: 46%;
+      margin-left: 12px;
+      margin-right: 12px;
+      .title {
+        text-align: left;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .features-list.list {
+    flex-wrap: nowrap;
+    padding-left: 156px;
+    padding-right: 156px;
+    margin-bottom: 120px;
+    .item {
+      min-width: 264px;
+      flex-basis: 0;
+      // margin-left: 12px;
+      // margin-right: 12px;
+      // .title {
+      //   text-align: left;
+      // }
+      &::before {
+        display: block;
+        content: '';
+        height: 112px;
+        border-radius: 4px;
+        background-color: rgba(244, 244, 253, 1);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 64px, 64px;
+      }
+      .title {
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+      .text {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.item.icon-antenna::before {
+  background-image: url(../images/antenna_1.png);
+}
+
+.item.icon-clock::before {
+  background-image: url(../images/clock_1.png);
+}
+
+.item.icon-diagram::before {
+  background-image: url(../images/diagram_1.png);
+}
+
+.item.icon-astronaut::before {
+  background-image: url(../images/astronaut_1.png);
+}
