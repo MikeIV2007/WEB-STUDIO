@@ -1,100 +1,82 @@
 # WEBSTUDIO (HTML / CSS layout)
 
+"WEBSTUDIO" project effectively demonstrates a range of fundamental and advanced techniques in HTML, CSS. It showcases best practices in web development, including semantic HTML, responsive design, and accessibility considerations, making it a well-rounded self-study project.
+
 Adaptive website layout for three viewport width sizes:
 
 mobile: 428px
+
 tablet: 768px
+
 desktop: 1440px
 
 To form the styles.css file the SASS constructor was used.
 
-Java Script was used to operate the modal window and pop-up menu window in the mobile version.
+Java Script was used to operate the modal window and pop-up site navigation menu window in the mobile version.
 
+## Table of Contents
+- [Adaptive layout](#fAdaptive_layout)
+- [SASS constructor](#SASS_constructor)
+- [HTML Techniques](#HTML_Techniques)
+- [CSS Techniques](#CSS_Techniques)
+- [Examples](#examples)
+- [Installation](#installation)
+- [License](#license)
 
+## Adaptive layout
+Adaptive website layout for three viewport width sizes:
 
-![Logo](https://github.com/KossKokos/Python_Web_Project/blob/main/Instagram_killer/logo/image.png)
+- mobile: 428px
+- tablet: 768px
+- desktop: 1440px
 
+## SASS constructor
+To get started, clone this repository and follow the installation instructions in the [Installation](#installation) section.
 
+## HTML Techniques
+- Document Structure:
 
-## Зміст
-- [Особливості](#особливості)
-- [Залежності](#залежності)
-- [Опис](#опис)
-- [Налаштування та запуск API](#налаштування_та_запуск_API)
-- [Документація](#документація)
-- [Ліцензія](#ліцензія)
+    DOCTYPE Declaration: Ensures the document is rendered in standards mode.
 
-## Особливості
-- Завантажуйте, редагуйте та видаляйте світлини
-- Додавайте теги та отримуйте унікальні QR-коди для трансформованих зображень
-- Надавайте коментарі, відкривайте свої профілі та здійснюйте пошук за ключовими словами та тегами
-- Рейтинг та можливість модерування роблять цю платформу ідеальним місцем для спільного обміну фотографіями та взаємодії.
+    Meta Tags: Specifies character encoding, viewport settings, and compatibility mode.
+    Semantic Elements:
 
-## Залежності
-  * python==3.10
-  * alembic==1.10.2
-  * babel==2.13.0
-  * bcrypt==4.0.1
-  * cloudinary==1.32.0
-  * colorama==0.4.6
-  * cryptography==41.0.5
-  * docutils==0.19
-  * fastapi==0.95.0
-  * email-validator==1.3.1
-  * fastapi-limiter==0.1.5
-  * fastapi-mail==1.2.7
-  * httpx==0.25.2
-  * jinja2==3.1.2
-  * passlib==1.7.4
-  * psycopg2==2.9.5
-  * pydantic==1.10.7
-  * pytest==7.4.3
-  * pytest-mock==3.12.0
-  * python-dotenv==1.0.0
-  * python-jose==3.3.0
-  * python-multipart==0.0.6
-  * redis==4.5.4
-  * requests==2.31.0
-  * sniffio==1.3.0
-  * sphinx==6.1.3
-  * sqlalchemy==2.0.7
-  * starlette==0.26.1
-  * urllib3==1.26.18
-  * uvicorn==0.21.1
-  * pytest-asyncio==0.23.2
-  * pytest-trio==0.8.0
-  * qrcode["pil"]==7.4.2
+- Use of semantic tags like <header>, <nav>, <main>, <section>, and <footer> to define the document structure clearly and enhance accessibility.
 
-## Опис
+- Navigation and Links:
 
-В папці src знаходиться вся робоча система:
-  -  У src\database знаходиться файл db.py, де підключено базу даних Postgresql, Щоб під'єднати власну db, потрібно ввести дані з вашої db у файл .env, що знаходиться у головній директорії проекту. 
-  -  У src\models знаходяться моделі таблиць, які ви створюєте і мігруєте їх в базу даних, тільки в цьому файлі.
-  -  У src\repository знаходяться crud фунції, кожен файл відповідальних за операції над певним об'єктом, наприклад в users.py тільки crud функції для юзерів і т.д. Нові crud операцї для нового об'єкта - новий файл.
-  -  У src\routes знаходяться файли для створення шляхів, наприклад в auth.py будуть api/auth/login, api/auth/signup, api/auth/request_email і так далі, в users.py будуть шляхи які починаються з api/users/ і так для кожних нових шляхів - новий файл.
-  -  у src\schemas знаходяться файли в яких моделі для видачі інформації, прийому від користувачів. Ви можете добавляти скільки завгодно моделів та файлів. 
-  -  У src\services знаходяться файли: auth.py та email.py, в яких знаходяться класи для виконання операцій по аутентифікації, авторизації і надсилання емейл для підтвердження користувача або скидання паролю. Ви можете добаляти нові сервери, наприклад для роботи з cloudinaryю
-  -  У src\templates знахоться темплейти для надсилання емейлів про підтвердження та зміни паролю.
+    Site Navigation: A <nav> element contains the main navigation links.
+    Link Elements: Proper use of anchor tags (<a>) with clear href attributes for navigation.
+    Form Elements:
 
+- Modal Form: Includes input elements for user interaction, such as text, email, and phone inputs, and a textarea for comments.
+    Form Labels and Inputs: Use of <label> for associating text with input elements, improving accessibility.
+    Icons and SVGs:
 
-## Налаштування та запуск API 
-- Важливо!!! Усі скоманди для запуску застосунку повинні виконуватись у теці Instagram_killer. Для цього у терміналі необхідно виконати команду "cd Instagram_killer".
+- SVG Icons: Using <svg> and <use> elements to include scalable vector graphics, which are resolution-independent and versatile.
 
-- Створить віртуальне оточення використовуючи Poetry за допомогою команди "poetry install --no-root".
+## CSS Techniques
+- External Stylesheets:
 
-- Активуйте оточення командою "poetry shell"
+    Linking external CSS files to maintain a clean separation between content (HTML) and presentation (CSS).
+    Normalize.css:
 
-- Файл .example.env є прикладом, які дані потрібно записувати. Для того, щоб запустити API, потрібно перейменувати його в .env та ввести свої дані.
+- Use of modern-normalize.min.css to ensure consistent styling across different browsers by normalizing default styles.
 
-- Файл docker-compose потрібен для запуску відразу двох баз даних: postgres та redis. Це полегшує роботу та збільшує продуктивність. Щоб запустити  його, введіть в консолі команду "docker-compose up" або "docker-compose up -d", для того, щоб не бачити логування. Щоб зупинити, введіть в консо".
+- Custom Fonts:
 
-- Для запуску сервера потрібно виконати команду python main.py
+    Integration of custom fonts from Google Fonts using the @font-face rule to enhance typography.
+    Flexbox Layout:
 
-## Документація
+- Implementing flexbox for layout control, particularly for the navigation menu and social media links, to create responsive and flexible layouts.
 
-http://localhost:8000/docs
+- CSS Variables:
 
-## Ліцензія
+    Use of CSS variables for consistent styling and easy theming across the project.
+    Responsive Design:
 
-Цей проект підпадає під дію MIT лицензіЇ.
-# goit-markup-hw-07
+Media queries to ensure the website is mobile-friendly and adjusts layouts based on different screen sizes.
+Transitions and Animations:
+
+CSS transitions to add smooth animations for interactive elements like buttons and menu toggles.
+
