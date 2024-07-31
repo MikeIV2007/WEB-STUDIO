@@ -9,7 +9,7 @@
 
 ## Table of Contents
 - [Adaptive layout](#adaptive-layout)
-- [SASS constructor](#sass-constructor)
+- [SASS preprocessor](#sass-preprocessor)
 - [HTML Techniques](#html-techniques)
 - [CSS Techniques](#css-techniques)
 - [Java Script](#java-script)
@@ -22,8 +22,8 @@ Adaptive website layout for three viewport width sizes:
 - tablet: 768px
 - desktop: 1440px
 
-## SASS constructor
-To form the styles.css file the SASS constructor was used.
+## SASS preprocessor
+- The styles.css file was created using the SASS preprocessor. To automate the process, Gulp was used.
 
 ## HTML Techniques
 - Document Structure:
