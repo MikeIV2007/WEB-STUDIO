@@ -2,6 +2,10 @@
 
 "WEBSTUDIO" project effectively demonstrates a range of fundamental and advanced techniques in HTML, CSS. It showcases best practices in web development, including semantic HTML, responsive design, and accessibility considerations, making it a well-rounded self-study project.
 
+"WEBSTUDIO" project was made according to Figma template:
+
+[Figma template](https://www.figma.com/design/lb6m9q7egSc1p8LY3jRiPy/Web-Studio?node-id=296641-536&t=JingYTzXaClHOJfv-0)
+
 
 ## Table of Contents
 - [Adaptive layout](#adaptive-layout)
