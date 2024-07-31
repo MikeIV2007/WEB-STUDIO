@@ -2,13 +2,13 @@
 
 "WEBSTUDIO" project effectively demonstrates a range of fundamental and advanced techniques in HTML, CSS. It showcases best practices in web development, including semantic HTML, responsive design, and accessibility considerations, making it a well-rounded self-study project.
 
-Java Script was used to operate the modal window and pop-up site navigation menu window in the mobile version.
 
 ## Table of Contents
 - [Adaptive layout](#adaptive-layout)
 - [SASS constructor](#sass-constructor)
 - [HTML Techniques](#html-techniques)
-- [CSS Techniques](#css_techniques)
+- [CSS Techniques](#css-techniques)
+- [Java Script](#java-script)
 
 
 ## Adaptive layout
@@ -30,20 +30,20 @@ To form the styles.css file the SASS constructor was used.
 
 - Semantic Elements:
 
-    - Use of semantic tags like <header>, <nav>, <main>, <section>, and <footer> to define the document structure clearly and   enhance accessibility.
+    - Use of semantic tags like `<header>`, `<nav>`, `<main>`,  `<section>`, and `<footer>` to define the document structure clearly and   enhance accessibility.
 
 - Navigation and Links:
 
-    - Site Navigation: A <nav> element contains the main navigation links.
-    - Link Elements: Proper use of anchor tags (<a>) with clear href attributes for navigation.
+    - Site Navigation: A `<nav>` element contains the main navigation links.
+    - Link Elements: Proper use of anchor tags `<a>` with clear href attributes for navigation.
 
 - Form Elements:
 
   -   Modal Form: Includes input elements for user interaction, such as text, email, and phone inputs, and a textarea for comments.
-    - Form Labels and Inputs: Use of <label> for associating text with input elements, improving accessibility.
+    - Form Labels and Inputs: Use of `<label>` for associating text with input elements, improving accessibility.
     - Icons and SVGs:
 
-- SVG Icons: Using <svg> and <use> elements to include scalable vector graphics, which are resolution-independent and versatile.
+- SVG Icons: Using `<svg>` and `<use>` elements to include scalable vector graphics, which are resolution-independent and versatile.
 
 ## CSS Techniques
 - External Stylesheets:
@@ -73,3 +73,7 @@ To form the styles.css file the SASS constructor was used.
 - Transitions and Animations:
 
     - CSS transitions to add smooth animations for interactive elements like buttons and menu toggles.
+
+## Java Script
+
+- Java Script was used to operate the modal window and pop-up site navigation menu window in the mobile version.
